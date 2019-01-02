@@ -22,8 +22,8 @@
     {
         "type": "shell",
         "inline": [
-          "pip install {{user `app`}}=={{user `yamllint_ver`}}",
-          "{{user `app`}} --version"
+          "pip install yamllint=={{user `yamllint_ver`}}",
+          "yamllint --version"
       ]
     }
   ],
