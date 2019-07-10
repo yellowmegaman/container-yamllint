@@ -15,10 +15,7 @@
       "type": "docker",
       "commit": true,
       "image": "{{user `from_image`}}",
-      "run_command": ["-dit", "--net=host", "{{.Image}}", "/bin/ash"],
-      "changes": [
-        "ENTRYPOINT [\"/usr/local/bin/yamllint\"]"
-      ]
+      "run_command": ["-dit", "--net=host", "{{.Image}}", "/bin/ash"]
     }
   ],
   "provisioners": [
