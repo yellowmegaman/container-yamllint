@@ -25,4 +25,4 @@ jobs:
         QUAY_PASSWORD: ${{ secrets.QUAY_PASSWORD }}
         YAMLLINT_VERSION: 1.17.0
         PROJECT_NAME: yellowmegaman
-        FROM_IMAGE: yellowmegaman/container-debian:bullseye
+        FROM_IMAGE: python:3.7.4-alpine
