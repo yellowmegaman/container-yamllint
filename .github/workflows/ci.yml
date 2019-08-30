@@ -12,7 +12,7 @@ jobs:
     - name: the-more-you-know
       run: env | sort
     - name: packer action
-      uses: yellowmegaman/github-action-get-packer@0.0.3
+      uses: yellowmegaman/github-action-get-packer@0.0.4
       with:
         args: 'build container-yamllint.json'
       env:
