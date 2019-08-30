@@ -14,7 +14,7 @@ jobs:
     - name: packer action
       uses: yellowmegaman/github-action-get-packer@0.0.1
       with:
-        args: ["build", "container-yamllint.json"]
+        args: 'build container-yamllint.json'
       env:
         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
         DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
