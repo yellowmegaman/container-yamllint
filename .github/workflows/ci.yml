@@ -13,7 +13,7 @@ jobs:
       run: env | sort
     - name: packer action
       uses: yellowmegaman/github-action-get-packer@0.0.1
-      runs: packer build container-yamllint.json
+      run: packer build container-yamllint.json
       env:
         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
         DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
