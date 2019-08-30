@@ -11,13 +11,9 @@ jobs:
       uses: actions/checkout@v1
     - name: the-more-you-know
       run: env | sort
-    - name: get packer
-      run: |
-        wget -q https://releases.hashicorp.com/packer/1.4.3/packer_1.4.3_linux_amd64.zip
-        unzip -q packer_1.4.3_linux_amd64.zip
-        rm packer_1.4.3_linux_amd64.zip
-    - name: build
-      run: $GITHUB_WORKSPACE/packer build container-yamllint.json
+    - name: packer action
+      uses: yellowmegaman/github-action-get-packer@0.0.1
+      run: packer build container-yamllint.json
       env:
         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
         DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
